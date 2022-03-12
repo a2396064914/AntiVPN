@@ -10,7 +10,7 @@ Each time a VPN connection is detected it will be printed to TShock's console al
 `/antivpn` will list subcommands. You can allow a TShock group to utilize this command by adding the `antivpn` permission to it.
 
 By default AntiVPN will be enabled at server start and will function every time a player joins, using the ipdata API to check their IP. Once the rate limit is hit on ipdata,
-IPHub will be used instead until the same occurs. **It is unlikely both APIs would be rate limited at any given time, though the possibility exists.**
+IPHub will be used instead until the same occurs. **It is unlikely both APIs would be rate limited at any given time; if this happens, the IP will be skipped.**
 
 ### There are currently three subcommands:
  * `status` - Prints the current AntiVPN state (enabled/disabled) and the API being used.

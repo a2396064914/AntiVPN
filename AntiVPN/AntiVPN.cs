@@ -76,7 +76,7 @@ namespace VPNPlugin
                     {
                         responseString = await client.GetStringAsync($"http://check.getipintel.net/check.php?ip={TShock.Players[args.Who].IP}&contact=jacobaustin.sec@gmail.com&flags=m");
                         float.TryParse(responseString, out float responseResult);
-                        if (responseResult >= 0.90 && responseResult < 2) 
+                        if (responseResult >= 0.9) 
                         {
                             TShock.Players[args.Who].Disconnect("[AntiVPN] VPN connections are not permitted.");
                         }

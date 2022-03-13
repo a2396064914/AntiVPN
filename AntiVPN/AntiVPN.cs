@@ -24,7 +24,7 @@ namespace VPNPlugin
 
         static string responseString;
 
-        static bool usingIPdata = true;
+        static bool usingIPintel = true;
 
         static bool antiVPNtoggle = true;
 
@@ -72,7 +72,7 @@ namespace VPNPlugin
             {
                 try
                 {
-                    if (usingIPdata)
+                    if (usingIPintel)
                     {
                         responseString = await client.GetStringAsync($"http://check.getipintel.net/check.php?ip={TShock.Players[args.Who].IP}&contact=jacobaustin.sec@gmail.com&flags=m");
                         float.TryParse(responseString, out float responseResult);
@@ -107,7 +107,7 @@ namespace VPNPlugin
 
                     if (i == 0)
                     {
-                        usingIPdata = !usingIPdata;
+                        usingIPintel = !usingIPintel;
                         Console.WriteLine($"[AntiVPN] Attempting alternative VPN lookup using {HostCheck()}...");
                     }
                     else
@@ -134,7 +134,7 @@ namespace VPNPlugin
                     break;
 
                 case "switchapi":
-                    usingIPdata = !usingIPdata;
+                    usingIPintel = !usingIPintel;
                     args.Player.SendSuccessMessage($"AntiVPN API switched to {HostCheck()}.");
                     break;
 
@@ -146,7 +146,7 @@ namespace VPNPlugin
 
         string HostCheck()
         {
-            string host = usingIPdata ? "ipdata" : "IPHub";
+            string host = usingIPintel ? "ipdata" : "IPHub";
             return host;
         }
 

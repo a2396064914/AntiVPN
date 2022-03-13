@@ -1,5 +1,5 @@
 # AntiVPN
-A [TShock](https://github.com/Pryaxis/TShock) plugin that aims to prevent VPN connections using [ipdata](https://getipintel.net/) and [IPHub](https://iphub.info/)'s API services.
+A [TShock](https://github.com/Pryaxis/TShock) plugin that aims to prevent VPN connections using [GetIPIntel](https://getipintel.net/) and [IPHub](https://iphub.info/)'s API services.
 
 **This plugin isn't intended for public use until I un-hardcode stuff** (is that a term?). If you currently attempt to use it on your own server, I am not responsible for rate limit issues you run into.
 

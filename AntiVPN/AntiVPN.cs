@@ -146,7 +146,7 @@ namespace VPNPlugin
 
         string HostCheck()
         {
-            string host = usingIPintel ? "ipdata" : "IPHub";
+            string host = usingIPintel ? "GetIPIntel" : "IPHub";
             return host;
         }
 
